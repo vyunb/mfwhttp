@@ -1,0 +1,37 @@
+{
+  "name": "@mfhttp/router",
+  "type": "module",
+  "description": "Router",
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json",
+    "./": "./"
+  },
+  "engines": {
+    "node": ">=12.4.0"
+  },
+  "scripts": {
+    "build": "rollup -c ../../build/defaultConfig.js"
+  },
+  "dependencies": {
+    "regexparam": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vyunb/mfwhttp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vyunb/mfwhttp/issues"
+  },
+  "homepage": "https://github.com/vyunb/mfwhttp#readme",
+  "version": "1.0.1",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}

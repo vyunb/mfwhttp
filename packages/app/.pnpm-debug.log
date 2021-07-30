@@ -1,0 +1,82 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1,
+    "workspacePrefix": "/Users/user/Desktop/ttp/tinyhttp"
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "@mfhttp/app",
+      "type": "module",
+      "description": "App",
+      "main": "./dist/index.cjs",
+      "types": "./dist/index.d.ts",
+      "module": "./dist/index.js",
+      "exports": {
+        ".": {
+          "import": "./dist/index.js",
+          "require": "./dist/index.cjs"
+        },
+        "./package.json": "./package.json",
+        "./": "./"
+      },
+      "engines": {
+        "node": ">=12.4.0"
+      },
+      "scripts": {
+        "build": "rollup -c ../../build/defaultConfig.js"
+      },
+      "dependencies": {
+        "@mfwhttp/router": "1.0.0",
+        "regexparam": "^2.0.0"
+      }
+    },
+    "prefix": "/Users/user/Desktop/ttp/tinyhttp/packages/app"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": true,
+    "storeDir": "/Users/user/.pnpm-store/v3",
+    "virtualStoreDir": "/Users/user/Desktop/ttp/tinyhttp/node_modules/.pnpm"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "/Users/user/Desktop/ttp/tinyhttp",
+    "stage": "resolution_started"
+  },
+  "4 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/regexparam/2.0.0",
+    "wanted": {
+      "dependentId": "packages/app",
+      "name": "regexparam",
+      "rawSpec": "^2.0.0"
+    }
+  },
+  "5 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/regexparam/2.0.0",
+    "requester": "/Users/user/Desktop/ttp/tinyhttp",
+    "status": "resolved"
+  },
+  "6 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/regexparam/2.0.0",
+    "requester": "/Users/user/Desktop/ttp/tinyhttp",
+    "status": "found_in_store"
+  },
+  "7 error pnpm": {
+    "code": "ERR_PNPM_FETCH_404",
+    "hint": "@mfwhttp/router is not in the npm registry, or you have no permission to fetch it.\n\nAn authorization header was used: Bearer ad2f[hidden]",
+    "request": {
+      "authHeaderValue": "Bearer ad2fddc3-c0a6-4fd5-acdc-62cbb95b7add",
+      "url": "https://registry.npmjs.org/@mfwhttp%2Frouter"
+    },
+    "response": {
+      "size": 0,
+      "timeout": 60000
+    },
+    "pkgName": "@mfwhttp/router",
+    "pkgsStack": [],
+    "err": {
+      "name": "Error",
+      "message": "GET https://registry.npmjs.org/@mfwhttp%2Frouter: Not Found - 404",
+      "code": "ERR_PNPM_FETCH_404",
+      "stack": "Error: GET https://registry.npmjs.org/@mfwhttp%2Frouter: Not Found - 404\n    at RetryOperation._fn (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:79562:18)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)"
+    }
+  }
+}
